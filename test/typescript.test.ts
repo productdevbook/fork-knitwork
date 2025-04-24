@@ -62,6 +62,13 @@ const genAugmentationTests: Array<{
 }`,
   },
   {
+    input: ["@nuxt/utils", { MyInterface: {}, OtherInterface: {} }],
+    code: `declare module "@nuxt/utils" {
+  interface MyInterface {}
+  interface OtherInterface {}
+}`,
+  },
+  {
     input: [
       "@nuxt/utils",
       {
